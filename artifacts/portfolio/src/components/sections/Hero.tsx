@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ArrowDown, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { profileData } from "@/data/profile";
 import heroBgUrl from "@/assets/hero-bg.png";
@@ -62,6 +62,23 @@ export function Hero() {
               ))}
             </motion.div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.55 }}
+            className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground font-mono"
+          >
+            <span className="inline-flex items-center gap-1.5">
+              <MapPin className="h-4 w-4 text-primary" /> {profileData.location}
+            </span>
+            <a href={`mailto:${profileData.contact.email}`} className="inline-flex items-center gap-1.5 hover:text-primary transition-colors">
+              <Mail className="h-4 w-4 text-primary" /> {profileData.contact.email}
+            </a>
+            <a href={`tel:${profileData.contact.phoneRaw}`} className="inline-flex items-center gap-1.5 hover:text-primary transition-colors">
+              <Phone className="h-4 w-4 text-primary" /> {profileData.contact.phone}
+            </a>
+          </motion.div>
 
           <motion.p 
             initial={{ opacity: 0 }}
