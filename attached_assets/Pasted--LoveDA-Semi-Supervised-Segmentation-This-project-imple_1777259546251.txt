@@ -1,0 +1,62 @@
+# LoveDA Semi-Supervised Segmentation
+
+This project implements a semi-supervised semantic segmentation pipeline for the LoveDA dataset using simulated point-level supervision. It demonstrates how to leverage sparse annotations to train robust deep learning models for remote sensing comparison.
+
+##  Project Structure
+
+```
+├── src/                    # Source code modules
+│   ├── config.py           # Configuration (Hyperparameters, Paths)
+│   ├── dataset.py          # Custom LoveDA Dataset Loader
+│   ├── loss.py             # Partial Cross-Entropy Loss Implementation
+│   ├── model.py            # U-Net Model Definition (SMP)
+│   └── train.py            # Training & Validation Loops
+├── main.ipynb              # Demonstration Notebook (Visualization & Training)
+├── Report.md               # Technical Report
+├── requirements.txt        # Dependencies
+└── README.md               # Project Documentation
+```
+
+##  Getting Started
+
+### 1. Installation
+Ensure you have Python 3.8+ installed. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Dataset Preparation
+Ensure the **LoveDA** dataset is placed in the parent directory or update `src/config.py` with the correct path:
+`DATA_DIR = '../LoveDA'`
+
+### 3. Running the Project
+You can run the training pipeline directly via the command line:
+
+```bash
+python -m src.train
+```
+
+Or explore the **interactive notebook** `main.ipynb` for:
+- Data visualization (Image + Point Masks)
+- Real-time training monitoring
+- Evaluation & Qualitative Analysis
+- **Automatic Resume**: The notebook checks for existing models in `models/` and skips training if a pre-trained model is found. To retrain, delete the `models/` directory.
+
+##  Methodology
+
+### Point Supervision
+Instead of full pixel-wise masks, we simulate sparse annotations by randomly sampling **1% of pixels** as ground truth labels. Masked pixels are ignored during loss calculation.
+
+### Partial Cross-Entropy Loss
+The model is trained using a custom loss function that only penalizes predictions at the labeled point locations:
+
+$$ \mathcal{L} = \frac{1}{|S|} \sum_{(i,j) \in S} \mathcal{L}_{CE}(\hat{y}_{i,j}, y_{i,j}) $$
+
+where $S$ is the set of labeled points.
+
+##  Results
+Training on an NVIDIA RTX 3050 (4GB VRAM) with mixed precision (AMP) yields promising segmentation results despite the sparsity of labels. See `main.ipynb` for visualization of predictions.
+
+##  Author
+[Mohamed Sameh]

@@ -1,0 +1,46 @@
+base) PS C:\Users\Asus\passport_ocr> mkdir .github\workflows
+
+
+    Directory: C:\Users\Asus\passport_ocr\.github
+
+
+Mode                 LastWriteTime         Length Name                                          
+----                 -------------         ------ ----                                          
+d-----         4/27/2026   6:44 AM                workflows                                     
+
+
+(base) PS C:\Users\Asus\passport_ocr> mkdir tests
+
+
+    Directory: C:\Users\Asus\passport_ocr
+
+
+Mode                 LastWriteTime         Length Name                                          
+----                 -------------         ------ ----                                          
+d-----         4/27/2026   6:44 AM                tests                                         
+
+
+(base) PS C:\Users\Asus\passport_ocr> git add .
+warning: in the working copy of 'setup.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'claude/settings.json', LF will be replaced by CRLF the next time Git touches it
+(base) PS C:\Users\Asus\passport_ocr> git commit -m "Initial commit: Passport OCR system with FastAPI, Streamlit, and CI/CD"
+[main b5303f6] Initial commit: Passport OCR system with FastAPI, Streamlit, and CI/CD
+ 7 files changed, 313 insertions(+), 30 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 ci.yml
+ create mode 100644 claude/settings.json
+ create mode 100644 test_basic.py
+(base) PS C:\Users\Asus\passport_ocr> git branch -M main
+(base) PS C:\Users\Asus\passport_ocr> git branch -M main
+(base) PS C:\Users\Asus\passport_ocr> git push -u origin main
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 5.33 KiB | 1.33 MiB/s, done.
+Total 10 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/medo-salah/passport_ocr.git
+   c0bc27c..b5303f6  main -> main
+branch 'main' set up to track 'origin/main'.
