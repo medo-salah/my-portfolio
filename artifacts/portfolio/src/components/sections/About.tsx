@@ -114,7 +114,7 @@ export function About() {
                 </h3>
                 <ul className="space-y-3 font-mono text-sm text-muted-foreground">
                   <li className="flex gap-2">
-                    <span className="text-foreground w-20">VAR name</span> = "{profileData.name}";
+                    <span className="text-foreground w-20">VAR name</span> = "{profileData.fullName}";
                   </li>
                   <li className="flex gap-2">
                     <span className="text-foreground w-20">VAR role</span> = "Data Specialist";

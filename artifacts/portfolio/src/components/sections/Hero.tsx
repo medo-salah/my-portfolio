@@ -84,7 +84,12 @@ export function Hero() {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="h-12 px-8" asChild>
-              <a href="#">
+              <a
+                href={`${import.meta.env.BASE_URL}${profileData.resumeUrl}`}
+                download="Mohamed_Sameh_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Download className="mr-2 h-4 w-4" /> Download CV
               </a>
             </Button>

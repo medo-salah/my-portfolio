@@ -1,5 +1,5 @@
 import { profileData } from "@/data/profile";
-import { Mail, MapPin, ExternalLink, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, ExternalLink, Github, Linkedin, Phone, Download } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Contact() {
@@ -25,17 +25,31 @@ export function Contact() {
             >
               Looking for a Data Scientist, Analyst, or Engineer? Let's connect and discuss how my skills can bring value to your team.
             </motion.p>
-            <motion.a 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              href={`mailto:${profileData.contact.email}`}
-              className="inline-flex items-center justify-center h-14 px-8 text-lg font-medium bg-primary text-primary-foreground rounded-lg shadow-lg hover:bg-primary/90 transition-colors"
+              className="flex flex-wrap gap-3"
             >
-              <Mail className="mr-2 h-5 w-5" />
-              Say Hello
-            </motion.a>
+              <a
+                href={`mailto:${profileData.contact.email}`}
+                className="inline-flex items-center justify-center h-14 px-8 text-lg font-medium bg-primary text-primary-foreground rounded-lg shadow-lg hover:bg-primary/90 transition-colors"
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                Say Hello
+              </a>
+              <a
+                href={`${import.meta.env.BASE_URL}${profileData.resumeUrl}`}
+                download="Mohamed_Sameh_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center h-14 px-8 text-lg font-medium border border-border bg-background text-foreground rounded-lg hover:bg-secondary transition-colors"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download CV
+              </a>
+            </motion.div>
           </div>
 
           <div className="md:w-1/3 flex flex-col justify-center space-y-6">
@@ -60,7 +74,19 @@ export function Contact() {
                 </a>
               </div>
             </div>
-            
+
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-secondary rounded-lg">
+                <Phone className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold mb-1">Phone</h4>
+                <a href={`tel:${profileData.contact.phoneRaw}`} className="text-muted-foreground hover:text-primary transition-colors">
+                  {profileData.contact.phone}
+                </a>
+              </div>
+            </div>
+
             <div className="flex gap-4 pt-4">
                <a 
                 href={profileData.contact.github} 

@@ -94,6 +94,11 @@ export function Education() {
                   <div className="flex flex-col">
                     <h3 className="text-xl font-bold text-foreground">{edu.degree}</h3>
                     <span className="text-primary font-medium my-1">{edu.institution}</span>
+                    {edu.period && (
+                      <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider mt-1">
+                        {edu.period}
+                      </span>
+                    )}
                     <p className="text-muted-foreground mt-2 leading-relaxed">
                       {edu.details}
                     </p>

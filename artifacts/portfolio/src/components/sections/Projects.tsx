@@ -2,15 +2,14 @@ import { motion } from "framer-motion";
 import { projectsData } from "@/data/projects";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BrainCircuit, LineChart, FileSearch, MonitorSpeaker, Sliders } from "lucide-react";
+import { CandlestickChart, Layers, FileSearch, ShieldCheck, Github, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const iconMap: Record<string, React.ElementType> = {
-  ml: BrainCircuit,
-  chart: LineChart,
+  trading: CandlestickChart,
+  segmentation: Layers,
   ocr: FileSearch,
-  desktop: MonitorSpeaker,
-  optimization: Sliders,
+  auth: ShieldCheck,
 };
 
 export function Projects() {
@@ -24,8 +23,8 @@ export function Projects() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {projectsData.map((project, index) => {
-            const Icon = iconMap[project.iconType] || BrainCircuit;
-            
+            const Icon = iconMap[project.iconType] || CandlestickChart;
+
             return (
               <motion.div
                 key={project.id}
@@ -38,28 +37,30 @@ export function Projects() {
                 <Card className="h-full flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 border-border overflow-hidden">
                   {/* Subtle top border highlight on hover */}
                   <div className="h-1 w-full bg-border group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent transition-all duration-500"></div>
-                  
+
                   <CardHeader className="pb-4">
                     <div className="flex justify-between items-start mb-4">
                       <div className="p-3 bg-secondary rounded-xl text-primary group-hover:bg-primary/10 transition-colors">
                         <Icon className="w-8 h-8" />
                       </div>
-                      <Button variant="ghost" size="sm" className="opacity-0 group-hover:opacity-100 transition-opacity hidden sm:flex">
-                        View Details
+                      <Button variant="ghost" size="sm" asChild className="opacity-0 group-hover:opacity-100 transition-opacity hidden sm:flex">
+                        <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                          View Repo <ArrowUpRight className="ml-1 h-4 w-4" />
+                        </a>
                       </Button>
                     </div>
                     <CardTitle className="text-2xl group-hover:text-primary transition-colors">
                       {project.title}
                     </CardTitle>
                   </CardHeader>
-                  
+
                   <CardContent className="flex-1">
                     <CardDescription className="text-base text-muted-foreground leading-relaxed">
                       {project.description}
                     </CardDescription>
                   </CardContent>
-                  
-                  <CardFooter className="pt-6 border-t border-border/50 bg-secondary/10">
+
+                  <CardFooter className="pt-6 border-t border-border/50 bg-secondary/10 flex flex-wrap items-center justify-between gap-4">
                     <div className="flex flex-wrap gap-2">
                       {project.techStack.map(tech => (
                         <Badge key={tech} variant="outline" className="bg-background">
@@ -67,6 +68,11 @@ export function Projects() {
                         </Badge>
                       ))}
                     </div>
+                    <Button variant="outline" size="sm" asChild className="shrink-0">
+                      <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                        <Github className="mr-2 h-4 w-4" /> GitHub
+                      </a>
+                    </Button>
                   </CardFooter>
                 </Card>
               </motion.div>
