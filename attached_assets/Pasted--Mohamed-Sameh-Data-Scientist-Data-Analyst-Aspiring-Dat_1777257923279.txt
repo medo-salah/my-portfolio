@@ -1,0 +1,157 @@
+# Mohamed Sameh
+### Data Scientist | Data Analyst | Aspiring Data Engineer
+
+📍 Egypt  
+📧 smedo4407@gmail.com  
+🔗 GitHub: https://github.com/medo-salah  
+🔗 LinkedIn: https://www.linkedin.com/in/mohamed-sameh-4614a925b/
+
+---
+
+## 🚀 Professional Summary
+Data Scientist with a strong foundation in data analysis, machine learning, and database systems. Experienced in transforming raw data into actionable insights and building data-driven solutions to solve real-world problems.
+
+Skilled in Python, SQL, and data visualization, with hands-on experience developing machine learning models, ETL workflows, and analytical dashboards. Demonstrates strong analytical thinking, attention to detail, and the ability to quickly adapt to new technologies.
+
+Fluent in English and French, enabling effective communication across diverse teams and international environments.
+
+---
+
+## 🧠 Technical Skills
+
+**Programming & Data Tools**
+- Python (Pandas, NumPy, Scikit-learn)
+- SQL (MySQL, SQL Server)
+- Power BI, Microsoft Excel (Advanced)
+- Git & GitHub
+
+**Data Science & Machine Learning**
+- Supervised Learning (Regression, Classification)
+- Model Evaluation & Performance Tuning
+- Feature Engineering
+- Data Cleaning & Preprocessing
+
+**Data Engineering**
+- ETL Pipeline Development
+- Data Transformation & Processing
+- Database Design & Optimization
+
+**Core Competencies**
+- Analytical Thinking & Problem Solving
+- Data-Driven Decision Making
+- Communication & Collaboration
+- Attention to Detail
+
+---
+
+## 💼 Projects
+
+### 📊 Titanic Survival Prediction (End-to-End ML Project)
+- Cleaned and preprocessed raw dataset, handling missing values and feature encoding  
+- Performed exploratory data analysis to identify key survival factors  
+- Built and evaluated classification models to predict survival outcomes  
+- Improved model performance through feature selection and tuning  
+
+**Technologies:** Python, Pandas, Matplotlib, Scikit-learn  
+
+---
+
+### 💰 Cryptocurrency Data Analysis & Investment Insights
+- Analyzed historical cryptocurrency data to identify trends and volatility patterns  
+- Evaluated risk vs return metrics to support data-driven investment decisions  
+- Developed visual reports to clearly communicate insights  
+
+**Technologies:** Python, Pandas, Data Visualization  
+
+---
+
+### 🛂 Passport OCR System (Data Extraction Application)
+- Developed an OCR-based system to extract structured data from passport images  
+- Parsed both MRZ and non-MRZ fields (name, nationality, address, etc.)  
+- Built an interactive web interface for user-friendly data input and output  
+
+**Technologies:** Python, OCR, Streamlit  
+
+---
+
+### 🏢 Company Classification Tool (Desktop Application)
+- Designed and implemented a GUI application to classify company names  
+- Integrated dataset-based lookup for classification logic  
+- Built a simple and efficient file-based search system  
+
+**Technologies:** Python, Tkinter  
+
+---
+
+### 📈 Machine Learning Model Optimization
+- Applied regularization techniques to reduce overfitting  
+- Tuned hyperparameters to improve model accuracy  
+- Evaluated models using appropriate performance metrics  
+
+**Technologies:** Python, Scikit-learn  
+
+---
+
+## 🎓 Education & Training
+
+### 🎓 Bachelor’s Degree (In Progress / Completed)
+**Field:** Computer Science or Related Discipline  
+
+---
+
+### 🏭 Data Science Training Program – Petrochemical Industry (Egypt)
+- Gained hands-on experience with real-world industrial datasets  
+- Applied machine learning and data analysis techniques in practical scenarios  
+- Strengthened understanding of business-driven data solutions  
+
+---
+
+### 📚 Machine Learning Coursework
+- Linear Regression, Logistic Regression  
+- Gradient Descent Optimization  
+- Supervised Learning Techniques  
+
+---
+
+## 🧪 Technical Experience Highlights
+- Developed end-to-end data solutions from data ingestion to visualization  
+- Built and optimized machine learning models for predictive tasks  
+- Designed structured queries and managed relational databases  
+- Created dashboards to support business insights and reporting  
+
+---
+
+## 🌍 Languages
+- Arabic: Native  
+- English: Professional Proficiency  
+- French: Fluent  
+
+---
+
+## 🎯 Career Objective
+Seeking an opportunity in Data Science, Data Engineering, or Analytics to apply technical expertise in solving real-world problems, contribute to data-driven decision-making, and grow within a dynamic and innovative environment.
+
+---
+
+## ⚙️ Portfolio Vision
+
+This portfolio is designed as the foundation of a **scalable, dynamic web platform**, with planned enhancements including:
+
+- Backend integration using APIs and modern frameworks  
+- Dynamic project rendering from databases  
+- Embedded interactive dashboards and analytics tools  
+- Real-time data processing and visualization  
+- Cloud-based deployment and scalability  
+
+The objective is to evolve this portfolio into a **production-level data platform**, showcasing both technical and analytical capabilities.
+
+---
+
+## 📬 Contact
+📧 smedo4407@gmail.com  
+🔗 GitHub: https://github.com/medo-salah  
+🔗 LinkedIn: https://www.linkedin.com/in/mohamed-sameh-4614a925b/
+
+---
+
+⭐ *Committed to continuous learning, building impactful solutions, and growing in the data field.*
